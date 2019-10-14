@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const Pusher = require("pusher-js/node");
 const execFile = require("child_process").execFile;
 
@@ -5,7 +7,7 @@ console.log("Hello world!");
 
 function handleNotify(data) {
   console.log("Got notification", data);
-  const child = execFile("./play-jingle.sh", [data.gif, data.time], (error, stdout, stderr) => {
+  const child = execFile("/opt/jingle/play-jingle.sh", [data.gif, data.time], (error, stdout, stderr) => {
     if (error) {
       throw error;
     }

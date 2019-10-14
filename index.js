@@ -5,7 +5,7 @@ console.log("Hello world!");
 
 function handleNotify(data) {
   console.log("Got notification", data);
-  const child = execFile("./play-jingle.sh", [data.gif, data.sound, data.time], (error, stdout, stderr) => {
+  const child = execFile("./play-jingle.sh", [data.gif, data.time], (error, stdout, stderr) => {
     if (error) {
       throw error;
     }
@@ -13,7 +13,7 @@ function handleNotify(data) {
   });
 }
 
-const pusher = new Pusher(process.env.PUSHER_KEY, {
+const pusher = new Pusher("c4de1cc2f3f02653b55c", {
   cluster: "eu",
   encrypted: true
 });

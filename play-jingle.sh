@@ -11,9 +11,8 @@ TIME=$2
 echo "Image $1"
 echo "Time $2"
 
-omxplayer --loop --no-osd $IMAGE &
-IMAGE_PID=$!
+omxplayer --no-keys --loop --no-osd --blank $IMAGE &
 
 sleep $TIME
 
-kill $IMAGE_PID
+killall omxplayer.bin

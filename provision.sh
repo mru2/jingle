@@ -2,7 +2,7 @@
 
 # Install dependencies
 apt-get update
-apt-get install git vlc nodejs npm ffmpeg
+apt-get install git nodejs npm ffmpeg
 
 # Fetch code
 git clone https://github.com/mru2/jingle /opt/jingle

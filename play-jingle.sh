@@ -11,7 +11,7 @@ TIME=$2
 echo "Image $1"
 echo "Time $2"
 
-ffplay -fs -loop 0 $IMAGE &
+omxplayer --loop --no-osd $IMAGE &
 IMAGE_PID=$!
 
 sleep $TIME

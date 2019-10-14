@@ -2,7 +2,7 @@
 
 # Install dependencies
 apt-get update
-apt-get install git nodejs npm ffmpeg
+apt-get install git nodejs npm omxplayer
 
 # Fetch code
 git clone https://github.com/mru2/jingle.git /opt/jingle

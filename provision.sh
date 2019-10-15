@@ -11,3 +11,9 @@ git clone https://github.com/mru2/jingle.git /opt/jingle
 cd /opt/jingle
 npm install
 
+# Setup service
+ln -s /opt/jingle/jingle.service /etc/systemd/system/jingle.service
+systemctl daemon-reload
+systemctl enable jingle
+systemctl start jingle
+

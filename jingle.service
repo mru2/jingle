@@ -1,0 +1,15 @@
+[Unit]
+Description=Pretto jingles
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi
+ExecStart=/opt/jingle/index.js
+Restart=on-failure
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=PUSHER_KEY=changeme
+
+[Install]
+WantedBy=multi-user.target
+
